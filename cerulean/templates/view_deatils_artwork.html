@@ -1,0 +1,283 @@
+<!doctype HTML>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+         View Artwork Order | Cerulean Bee   
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href={% static 'css/bootstrap/bootstrap.css'%}>
+    <link rel="stylesheet" href={% static 'css/animate.css'%}>
+    <link rel="stylesheet" href={% static 'css/font-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/jquery-ui.css'%}>
+    <link rel="stylesheet" href={% static 'css/line-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/magnific-popup.css'%}>
+    <link rel="stylesheet" href={% static 'css/owl.carousel.css'%}>
+    <link rel="stylesheet" href={% static 'css/select2.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/simple-line-icons.css'%}>
+    <link rel="stylesheet" href={% static 'css/slick.css'%}>
+    <link rel="stylesheet" href={% static 'css/trumbowyg.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/venobox.css'%}>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <!-- endinject -->
+</head>
+
+<body class="dashboard-page preload">
+    
+    {% include 'headermain.html' %}
+    {% include 'header.html' %}
+
+    <section class="dashboard-area">
+
+        <div class="dashboard_contents p-top-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2>VIEW ARTWORK ORDER</h2>
+                    </div>
+                    <div class="col-md-2 p-bottom-25"> 
+                        <a href="{% url 'artwork_order' %}">
+                            <button class="btn btn--icon btn-md btn--round btn-secondary" style="float: right;">
+                                <span class="icon-minus" style="padding-right: 10px;"></span>Back
+                            </button>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+        <div class="dashboard_contents p-bottom-70">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Customer Information</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="customer_name">Customer Name
+                                                </label><br>
+                                                {{data.customer_name}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="orderdate">Order Date
+                                                </label><br>
+                                                {{data.order_date}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="emailad">E-mail
+                                                </label><br>
+                                                {{data.email_id}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="dateapproved">Date Approved</label><br>
+                                                {{data.approved_date}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone
+                                                </label><br>
+                                                {{data.phone_number}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="scheduleddate">Scheduled Print Date
+                                                </label><br>
+                                                {{data.scheduled_print_date}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="discount">Discount
+                                                </label><br>
+                                                {{data.discount_rate}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="totalprice">Total Price </label><br>
+                                                {{data.total_price}}
+                                            </div>
+                                        </div>
+                                    </div><!-- ends: .information_wrapper -->
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Artwork Items</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="apparelitem">Apparel / Item
+                                                    </label><br>
+                                                    {{data.apparel_item}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="event">Event
+                                                    </label><br>
+                                                    {{data.event_name}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="basecolor">Base Color
+                                                    </label><br>
+                                                    {{data.base_color}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="theme">Theme
+                                                    </label><br>
+                                                    {{data.theme_name}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="maxcolors">Maximum Colors</label><br>
+                                                    {{data.max_colors}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->                                          
+                                        </div><!-- ends: .row -->
+                                    </div>
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Artwork Details</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="apparelitem">Art Location
+                                                    </label><br>
+                                                    {{data.art_location_01}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="event">Description
+                                                    </label><br>
+                                                    {{data.description_01}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="basecolor">Cost
+                                                    </label><br>
+                                                    {{data.cost_01}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="theme">Employee
+                                                    </label><br>
+                                                    {{data.employee_01}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="maxcolors">Complete Date</label><br>
+                                                   {{data.complete_date_01}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="theme">Colors
+                                                    </label><br>
+                                                    {{data.colors_01}}
+                                                </div>
+                                            </div>                                          
+                                        </div><!-- ends: .row -->
+                                    </div>
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Artwork Details</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="apparelitem">Art Location
+                                                    </label><br>
+                                                    {{data.art_location_02}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="event">Description
+                                                    </label><br>
+                                                    {{data.description_02}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="basecolor">Cost
+                                                    </label><br>
+                                                    {{data.cost_02}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="theme">Employee
+                                                    </label><br>
+                                                    {{data.employee_02}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="maxcolors">Date Complete</label><br>
+                                                    {{data.complete_date_02}}
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="theme">Colors
+                                                    </label><br>
+                                                    {{data.colors_02}}
+                                                </div>
+                                            </div>                                          
+                                        </div><!-- ends: .row -->
+                                    </div>
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                    </div><!-- ends: .row -->
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+
+    </section><!-- ends: .dashboard-area -->
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype HTML>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | Cerulean Bee</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href={% static 'css/bootstrap/bootstrap.css'%}>
+    <link rel="stylesheet" href={% static 'css/animate.css'%}>
+    <link rel="stylesheet" href={% static 'css/font-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/jquery-ui.css'%}>
+    <link rel="stylesheet" href={% static 'css/line-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/magnific-popup.css'%}>
+    <link rel="stylesheet" href={% static 'css/owl.carousel.css'%}>
+    <link rel="stylesheet" href={% static 'css/select2.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/simple-line-icons.css'%}>
+    <link rel="stylesheet" href={% static 'css/slick.css'%}>
+    <link rel="stylesheet" href={% static 'css/trumbowyg.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/venobox.css'%}>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <!-- endinject -->
+</head>
+
+<body class="dashboard-page preload">
+    
+    {% include 'headermain.html' %}
+    {% include 'header.html' %}
+    
+    <section class="dashboard-area">
+        
+        
+        
+        <div class="dashboard_contents p-top-150 p-bottom-150" style="min-height:63vh">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="author-info author-info--dashboard">
+                            <h1 class="primary">
+                                
+                            </h1>
+                            <p>Artwork Order</p>
+                        </div>
+                    </div><!-- end .col-lg-3 -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="author-info author-info--dashboard">
+                            <h1 class="secondary">
+                                
+                            </h1>
+                            <p>Employee Work Details</p>
+                        </div>
+                    </div><!-- end .col-lg-3 -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="author-info author-info--dashboard">
+                            <h1 class="info">
+                                
+                            </h1>
+                            <p>Print Orders</p>
+                        </div>
+                    </div><!-- end .col-lg-3 -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="author-info author-info--dashboard">
+                            <h1 class="danger">
+                                
+                            </h1>
+                            <p>Project Cost Analysis</p>
+                        </div>
+                    </div><!-- end .col-lg-3 -->
+                </div>
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+    </section><!-- ends: .dashboard-area -->
+    <!-- modal -->
+    <div class="modal fade item_removal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Please confirm the removal of the item.</h4>
+                    <div class="btns">
+                        <a href="#" class="btn btn--md btn-danger">Confirm</a>
+                        <a href="#" class="btn btn--md btn-primary" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">Cancel</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DigiPro - Digital Products Marketplace ">
+    <meta name="keywords" content="marketplace, easy digital download, digital product, digital, html5">
+    <title>Employee Work Log | Cerulean Bee</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href={% static 'css/bootstrap/bootstrap.css'%}>
+    <link rel="stylesheet" href={% static 'css/animate.css'%}>
+    <link rel="stylesheet" href={% static 'css/font-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/jquery-ui.css'%}>
+    <link rel="stylesheet" href={% static 'css/line-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/magnific-popup.css'%}>
+    <link rel="stylesheet" href={% static 'css/owl.carousel.css'%}>
+    <link rel="stylesheet" href={% static 'css/select2.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/simple-line-icons.css'%}>
+    <link rel="stylesheet" href={% static 'css/slick.css'%}>
+    <link rel="stylesheet" href={% static 'css/trumbowyg.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/venobox.css'%}>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <!-- endinject -->
+</head>
+
+<body class="dashboard-page preload">
+    
+    {% include 'headermain.html' %}
+    {% include 'header.html' %} 
+    <section class="dashboard-area">
+
+        <div class="dashboard_contents p-top-50 p-bottom-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 p-bottom-25"> 
+                    <a href="{% url 'add_employee_work' %}"><button class="btn btn--icon btn-md btn--round btn-secondary" style="float: right;">
+                                <span class="icon-plus" style="padding-right: 10px;"></span>Add Employee Work Log
+                        </button></a>
+                    </div>
+                    <div class="col-md-12">
+                    <div class="statement_table table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Employee ID</th>
+                                        <th>Employee Name</th>
+                                        <th>Phone</th>
+                                        <th>Work Type</th>
+                                        <th>Date</th>
+                                        <th>Start Time</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                            <!-- Start Pagination -->
+                        </div><!-- ends: .statement_table -->
+                    </div><!-- end .col-lg-3 -->
+                </div>
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+    </section><!-- ends: .dashboard-area -->
+    </body>
+    </html>

@@ -1,0 +1,222 @@
+<!doctype HTML>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+            Add Employee Work Log | Cerulean Bee
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href={% static 'css/bootstrap/bootstrap.css'%}>
+    <link rel="stylesheet" href={% static 'css/animate.css'%}>
+    <link rel="stylesheet" href={% static 'css/font-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/jquery-ui.css'%}>
+    <link rel="stylesheet" href={% static 'css/line-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/magnific-popup.css'%}>
+    <link rel="stylesheet" href={% static 'css/owl.carousel.css'%}>
+    <link rel="stylesheet" href={% static 'css/select2.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/simple-line-icons.css'%}>
+    <link rel="stylesheet" href={% static 'css/slick.css'%}>
+    <link rel="stylesheet" href={% static 'css/trumbowyg.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/venobox.css'%}>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <!-- endinject -->
+</head>
+
+<body class="dashboard-page preload">
+    
+    {% include 'headermain.html' %}
+    {% include 'header.html' %} 
+    <section class="dashboard-area">
+        
+        <div class="dashboard_contents p-top-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2>ADD EMPLOYEE WORK LOG</h2>
+                    </div>
+                    <div class="col-md-2 p-bottom-25"> 
+                        <a href="{% url 'employee_details' %}">
+                            <button class="btn btn--icon btn-md btn--round btn-secondary" style="float: right;">
+                                <span class="icon-minus" style="padding-right: 10px;"></span>Back
+                            </button>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+        <div class="dashboard_contents p-bottom-70">
+            <div class="container">
+                <form method="post" class="setting_form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Employee Information</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="employee_name">Employee Name
+                                                    <sup>*</sup>
+                                                </label>
+                                                <input class="form-control" type="hidden" name="employee_id">
+                                                <input type="text" name="employee_name" id="employee_name" class="text_field" placeholder="Last Name & First Name" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="employee_phone">Phone
+                                                    <sup>*</sup>
+                                                </label>
+                                                <input type="text" name="employee_phone" id="employee_phone" class="text_field" placeholder="Enter Phone Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="work_type">Work Type
+                                                    <sup>*</sup>
+                                                </label>
+                                                <div class="select-wrap select-wrap2">
+                                                    <select name="work_type" id="columns" class="text_field">
+                                                        <option value="" selected disabled>Choose Employee Work Type</option>
+                                                        <option value="Part Time">Part Time</option>
+                                                        <option value="Full Time">Full Time</option>
+                                                    </select>
+                                                    <span class="lnr icon-arrow-down"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- ends: .information_wrapper -->
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Project Details - 1</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="pd_date_01">Date
+                                                    </label>
+                                                    <input type="date" name="pd_date_01" id="pd_date_01" class="text_field" placeholder="Enter Order Date">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="pd_start_time_01">Start Time
+                                                    </label>
+                                                    <input type="time" name="pd_start_time_01" id="pd_start_time_01" class="text_field" placeholder="Enter Order Time">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="project_01">Project
+                                                    </label>
+                                                    <input type="text" name="project_01" id="project_01" class="text_field" placeholder="Enter Project Name"> 
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="art_item_01">Art Item
+                                                    </label>
+                                                    <input type="text" name="art_item_01" id="art_item_01" class="text_field" placeholder="Enter Art item">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="task_01">Task</label>
+                                                    <input type="text" name="task_01" id="task_01" class="text_field" placeholder="Enter Task Name">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="end_time_01">End Time</label>
+                                                    <input type="time" name="end_time_01" id="end_time_01" class="text_field">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->                                             
+                                        </div><!-- ends: .row -->
+                                    </div>
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Project Details - 2</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="pd_date_02">Date
+                                                    </label>
+                                                    <input type="date" name="pd_date_02" id="pd_date_02" class="text_field" placeholder="Enter Order Date">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="pd_start_time_02">Start Time
+                                                    </label>
+                                                    <input type="time" name="pd_start_time_02" id="pd_start_time_02" class="text_field" placeholder="Enter Order Time">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="project_02">Project
+                                                    </label>
+                                                    <input type="text" name="project_02" id="project_02" class="text_field" placeholder="Enter Project Name">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="art_item_02">Art Item
+                                                    </label>
+                                                    <input type="text" name="art_item_02" id="art_item_02" class="text_field" placeholder="Enter Art item">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="task_02">Task</label>
+                                                    <input type="text" name="task_02" id="task_02" class="text_field" placeholder="Enter Task Name">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="end_time_02">End Time</label>
+                                                    <input type="time" name="end_time_02" id="end_time_02" class="text_field">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->                                             
+                                        </div><!-- ends: .row -->
+                                    </div>
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                        
+                        <div class="col-md-12">
+                            <div class="dashboard_setting_btn">
+                                
+                                    <button type="submit" name="add" class="btn btn--md btn-primary">Save Change</button>
+                                    <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                                </div>    
+                            </div>
+                        </div><!-- ends: .col-md-12 -->
+                    </div><!-- ends: .row -->
+                </form><!-- end /form -->
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+            
+    </section><!-- ends: .dashboard-area -->
+</body>
+</html>

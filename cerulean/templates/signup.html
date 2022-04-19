@@ -1,0 +1,82 @@
+<!doctype HTML>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signup | Cerulean Bee</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href={% static 'css/bootstrap/bootstrap.css'%}>
+    <link rel="stylesheet" href={% static 'css/animate.css'%}>
+    <link rel="stylesheet" href={% static 'css/font-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/jquery-ui.css'%}>
+    <link rel="stylesheet" href={% static 'css/line-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/magnific-popup.css'%}>
+    <link rel="stylesheet" href={% static 'css/owl.carousel.css'%}>
+    <link rel="stylesheet" href={% static 'css/select2.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/simple-line-icons.css'%}>
+    <link rel="stylesheet" href={% static 'css/slick.css'%}>
+    <link rel="stylesheet" href={% static 'css/trumbowyg.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/venobox.css'%}>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <!-- endinject -->
+</head>
+
+<body class="preload">
+    
+    <section class="login_area p-top-150 p-bottom-150" style="min-height: 90.3vh">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                <form method="post" autocomplete="off">
+                    {% csrf_token %}
+                        <div class="cardify signup_form">
+                            <div class="login--header">
+                                <h3>Create Your Account</h3>
+                                <p>Please fill the following fields with appropriate information to register a new Cerulean Bee
+                                </p>
+                            </div><!-- end .login_header -->
+                            <div class="login--form">
+                                <div class="form-group">
+                                    <label for="email_ad">Email Address</label>
+                                    <input id="email_ad" type="email" name="email" class="text_field" placeholder="Enter your email address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_name">Username</label>
+                                    <input id="user_name" type="text" name="username" class="text_field" placeholder="Enter your username...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" name="password" class="text_field" placeholder="Enter your password...">
+                                </div>
+                                <input class="btn btn--md register_btn btn-primary" type="submit" name="register" value="Register Now">
+                                <div class="login_assist">
+                                    <p>Already have an account?
+                                        <a href="{% url 'index' %}">Login</a>
+                                    </p>
+                                </div>
+                            </div><!-- end .login--form -->
+                        </div><!-- end .cardify -->
+                    </form>
+                </div><!-- end .col-md-6 -->
+            </div><!-- end .row -->
+        </div><!-- end .container -->
+    </section><!-- ends: .login_area -->
+</body>
+</html>
+
+{% if error == "No" %}
+<script>
+    alert("Signup successful.");
+    window.location = ("{% url 'index' %}")
+</script>
+{% endif %}
+
+{% if error == "Yes" %}
+<script>
+    alert("{{ msg }}");
+</script>
+{% endif %}
