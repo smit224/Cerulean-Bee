@@ -1,4 +1,5 @@
 from os import error
+from turtle import pd
 from django.shortcuts import redirect, render
 from .models import *
 from django.contrib.auth.models import User
@@ -50,7 +51,7 @@ def home(request):
     return render(request,'home.html')
 
 def artwork_order(request):
-    
+    print("-=-=-=-sk98rt-=-=-")
     data=ArtworkOrder.objects.all()
     d = {'data':data}
     return render(request,'artwork_order.html',d)
@@ -111,11 +112,27 @@ def add_artwork_order(request):
             error="Yes"
 
     d={'error':error}
-
+    print("-------sasasasasasas-----",d)
     return render(request,'add_artwork_order.html',d)
 
 def add_employee_work(request):
-    
+    emp_name = request.POST['employee_name']
+    emp_phone = request.POST['employee_phone']
+    work_type = request.POST['work_type']
+    pd_date_01 = request.POST['pd_date_01']
+    pd_start_time_01 = request.POST['pd_start_time_01']
+    project_01 = request.POST['project_01']
+    art_item_01 = request.POST['art_item_01']
+    task_01 = request.POST['task_01']
+
+    try:   
+        ArtworkOrder.objects.create(employee_name=emp_name, employee_phone=emp_phone, work_type=work_type, pd_date_01=pd_date_01, pd_start_time_01=pd_start_time_01, project_01=project_01, employee_name=employee_name,
+                                    employee_phone=employee_phone)
+        error="No"
+    except:
+        error="Yes"
+
+    d={'error':error}
     return render(request,'add_employee_work.html')
 
 def view_deatils_artwork(request,pid):
