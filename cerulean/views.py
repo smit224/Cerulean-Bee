@@ -112,7 +112,7 @@ def add_artwork_order(request):
             error="Yes"
 
     d={'error':error}
-    print("-------sasasasasasas-----",d)
+    # print("-------sasasasasasas-----",d)
     return render(request,'add_artwork_order.html',d)
 
 def add_employee_work(request):
@@ -124,10 +124,18 @@ def add_employee_work(request):
     project_01 = request.POST['project_01']
     art_item_01 = request.POST['art_item_01']
     task_01 = request.POST['task_01']
+    end_time_01 = request.POST['end_time_01']
+    pd_date_02 = request.POST['pd_date_02']
+    pd_start_time_02 = request.POST['pd_start_time_02']
+    project_02 = request.POST['project_02']
+    art_item_02 = request.POST['art_item_02']
+    task_02 = request.POST['task_02']
+    end_time_02 = request.POST['end_time_02']
 
     try:   
-        ArtworkOrder.objects.create(employee_name=emp_name, employee_phone=emp_phone, work_type=work_type, pd_date_01=pd_date_01, pd_start_time_01=pd_start_time_01, project_01=project_01, employee_name=employee_name,
-                                    employee_phone=employee_phone)
+        ArtworkOrder.objects.create(employee_name=emp_name, employee_phone=emp_phone, work_type=work_type, pd_date_01=pd_date_01, pd_start_time_01=pd_start_time_01, project_01=project_01, art_item_01=art_item_01,
+                                    task_01=task_01, end_time_01=end_time_01, pd_date_02=pd_date_02, pd_start_time_02=pd_start_time_02, project_02=project_02, art_item_02=art_item_02,
+                                    task_02 = task_02, end_time_02=end_time_02)
         error="No"
     except:
         error="Yes"
