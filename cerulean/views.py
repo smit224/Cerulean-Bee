@@ -185,7 +185,7 @@ def edit_artwork_order(request,pid):
     d={'error':error,'data':data} 
     return render(request,'edit_artwork_order.html',d)
 
-#Employee Work Details
+#EMPLOYEE WORK DETAILS
 def employee_details(request):
     data=EmployeeWorkDetails.objects.all()
     d = {'data':data}
@@ -220,9 +220,6 @@ def add_employee_work(request):
         end_time_02= end_time_02 + ':00'
         
         try:   
-            # EmployeeWorkDetails.objects.create(employee_name=emp_name, employee_phone=empl_phone, work_type=work_type, pd_date_01=pd_date_01, pd_start_time_01=pd_start_time_01, project_01=project_01, art_item_01=art_item_01,
-            #                             task_01=task_01, end_time_01=end_time_01, pd_date_02=pd_date_02, pd_start_time_02=pd_start_time_02, project_02=project_02, art_item_02=art_item_02,
-            #                             task_02 = task_02, end_time_02=end_time_02)
             EmployeeWorkDetails.objects.create(employee_name=emp_name, employee_phone=empl_phone, work_type=work_type, pd_date_01=pd_date_01,pd_start_time_01=pd_start_time_01, project_01=project_01, art_item_01=art_item_01,
                                         task_01=task_01, end_time_01=end_time_01, pd_date_02=pd_date_02, project_02=project_02, art_item_02=art_item_02,
                                         task_02 = task_02, pd_start_time_02=pd_start_time_02,end_time_02=end_time_02)
@@ -300,11 +297,76 @@ def edit_employee_work(request,pid):
     d={'error':error,'data':data} 
     return render(request,'edit_employee_work.html',d)
 
-
+#PRINT ORDERS
 def print_order(request):
-    
-    return render(request,'print_order.html')
+    data=PrintOrder.objects.all()
+    d = {'data':data}
+    print("-=-=-=-sk98rt-=-=-")
+    return render(request,'print_order.html',d)
 
+def add_print_order(request):
+    
+    error=""
+    if request.method=='POST':        
+        customername = request.POST['customername']
+        orderdate = request.POST['orderdate']
+        emailid = request.POST['emailid']
+        artdate = request.POST['artdate']
+        phonenumber = request.POST['phonenumber']
+        duedate = request.POST['duedate']
+        setupcharge = request.POST['setupcharge']
+        apparelorderdate = request.POST['apparelorderdate']
+        deposit = request.POST['deposit']
+        filmdate = request.POST['filmdate']
+        discount = request.POST['discount']
+        printdate = request.POST['printdate']
+        totalcost = request.POST['totalcost']
+        basecolor = request.POST['basecolor']
+        vendorname = request.POST['vendorname']
+        xsnumber = request.POST['xsnumber']
+        xscharge = request.POST['xscharge']
+        snumber = request.POST['snumber']
+        scharge = request.POST['scharge']
+        mnumber = request.POST['mnumber']
+        mcharge = request.POST['mcharge']
+        lnumber = request.POST['lnumber']
+        lcharge = request.POST['lcharge']
+        xlnumber = request.POST['xlnumber']
+        xlcharge = request.POST['xlcharge']
+        xxlnumber = request.POST['xxlnumber']
+        xxlcharge = request.POST['xxlcharge']
+        unitbaseprice = request.POST['unitbaseprice']
+        colorcharge = request.POST['colorcharge']
+        blankprice = request.POST['blankprice']
+        locationsize = request.POST['locationsize']
+        colorchange = request.POST['colorchange']
+        colorlist = request.POST['colorlist']
+        finalcost = request.POST['finalcost']
+        
+        
+        try:   
+            PrintOrder.objects.create(customername=customername, orderdate=orderdate, emailid=emailid, artdate=artdate, phonenumber=phonenumber, duedate=duedate, setupcharge=setupcharge,
+                                       apparelorderdate=apparelorderdate, deposit=deposit, filmdate=filmdate, discount=discount, printdate=printdate, totalcost=totalcost, basecolor=basecolor,
+                                        vendorname=vendorname, xsnumber=xsnumber, xscharge=xscharge, snumber=snumber, scharge=scharge, mnumber=mnumber, mcharge=mcharge, lnumber=lnumber, lcharge=lcharge,
+                                        xlnumber=xlnumber, xlcharge=xlcharge, xxlnumber=xxlnumber, xxlcharge=xxlcharge, unitbaseprice=unitbaseprice, colorcharge=colorcharge, blankprice=blankprice, locationsize=locationsize,
+                                         colorchange=colorchange, colorlist=colorlist,finalcost=finalcost)
+            error="No"
+        except Exception as e:
+            print("-----",e)
+            error="Yes"
+
+    d={'error':error}
+    print("-----------aaaa-------", d)
+    return render(request,'add_print_order.html',d)
+
+def view_print_order(request,pid):
+      
+    work = PrintOrder.objects.get(customer_id=pid)
+    d = {'data':work}
+    return render(request,'view_print_order.html',d)
+
+
+#PROJECT COST ANALYSIS
 def project_cost_analysis(request):
     
     return render(request,'project_cost_analysis.html')

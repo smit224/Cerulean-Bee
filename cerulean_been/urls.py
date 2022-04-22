@@ -36,5 +36,7 @@ urlpatterns = [
     path('view_employee_work/<int:pid>',view_employee_work,name="view_employee_work"),
     path('delete_employee_work/<int:pid>',delete_employee_work,name="delete_employee_work"),
     path('edit_employee_work/<int:pid>',edit_employee_work,name="edit_employee_work"),
+    path('add_print_order',add_print_order,name='add_print_order'),
+    path('view_print_order/<int:pid>',view_print_order,name='view_print_order'),
     path('Logout',Logout,name="Logout"),
 ]
