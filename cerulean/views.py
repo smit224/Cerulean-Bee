@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 #from sklearn.externals import joblib
 from django.contrib.staticfiles import finders
 from datetime import date
+
 # Create your views here.
 
 # Create your views here.
@@ -36,7 +37,6 @@ def signup(request):
         pwd = request.POST['password']
         un = request.POST['username']
         try:
-           
            SystemUser.objects.create(username=un,email_id=em,password=pwd)
            error="No"
         except Exception as e:
@@ -56,17 +56,7 @@ def artwork_order(request):
     d = {'data':data}
     return render(request,'artwork_order.html',d)
 
-def employee_details(request):
-    
-    return render(request,'employee_details.html')
 
-def print_order(request):
-    
-    return render(request,'print_order.html')
-
-def project_cost_analysis(request):
-    
-    return render(request,'project_cost_analysis.html')
 
 def add_artwork_order(request):
     
@@ -114,34 +104,6 @@ def add_artwork_order(request):
     d={'error':error}
     # print("-------sasasasasasas-----",d)
     return render(request,'add_artwork_order.html',d)
-
-def add_employee_work(request):
-    emp_name = request.POST['employee_name']
-    emp_phone = request.POST['employee_phone']
-    work_type = request.POST['work_type']
-    pd_date_01 = request.POST['pd_date_01']
-    pd_start_time_01 = request.POST['pd_start_time_01']
-    project_01 = request.POST['project_01']
-    art_item_01 = request.POST['art_item_01']
-    task_01 = request.POST['task_01']
-    end_time_01 = request.POST['end_time_01']
-    pd_date_02 = request.POST['pd_date_02']
-    pd_start_time_02 = request.POST['pd_start_time_02']
-    project_02 = request.POST['project_02']
-    art_item_02 = request.POST['art_item_02']
-    task_02 = request.POST['task_02']
-    end_time_02 = request.POST['end_time_02']
-
-    try:   
-        ArtworkOrder.objects.create(employee_name=emp_name, employee_phone=emp_phone, work_type=work_type, pd_date_01=pd_date_01, pd_start_time_01=pd_start_time_01, project_01=project_01, art_item_01=art_item_01,
-                                    task_01=task_01, end_time_01=end_time_01, pd_date_02=pd_date_02, pd_start_time_02=pd_start_time_02, project_02=project_02, art_item_02=art_item_02,
-                                    task_02 = task_02, end_time_02=end_time_02)
-        error="No"
-    except:
-        error="Yes"
-
-    d={'error':error}
-    return render(request,'add_employee_work.html')
 
 def view_deatils_artwork(request,pid):
       
@@ -222,6 +184,130 @@ def edit_artwork_order(request,pid):
             error="Yes"
     d={'error':error,'data':data} 
     return render(request,'edit_artwork_order.html',d)
+
+#Employee Work Details
+def employee_details(request):
+    data=EmployeeWorkDetails.objects.all()
+    d = {'data':data}
+    print("-=-=-=-sk98rt-=-=-")
+    return render(request,'employee_details.html',d)
+    
+    
+
+def add_employee_work(request):
+    
+    error=""
+    if request.method=='POST':        
+        emp_name = request.POST['employee_name']
+        empl_phone = request.POST['employee_phone']
+        work_type = request.POST.get('work_type')
+        pd_date_01 = request.POST['pd_date_01']
+        pd_start_time_01 = request.POST['pd_start_time_01']
+        pd_start_time_01 = pd_start_time_01 + ':00'
+        project_01 = request.POST['project_01']
+        art_item_01 = request.POST['art_item_01']
+        task_01 = request.POST['task_01']
+        end_time_01 = request.POST['end_time_01']
+        end_time_01 = end_time_01 + ':00'
+        pd_date_02 = request.POST['pd_date_02']
+        pd_start_time_02 = request.POST['pd_start_time_02']
+        pd_start_time_02= pd_start_time_02 + ':00'
+        project_01 = request.POST['project_01']
+        project_02 =request.POST['project_02']
+        art_item_02 = request.POST['art_item_02']
+        task_02 = request.POST['task_02']
+        end_time_02 =request.POST['end_time_02']
+        end_time_02= end_time_02 + ':00'
+        
+        try:   
+            # EmployeeWorkDetails.objects.create(employee_name=emp_name, employee_phone=empl_phone, work_type=work_type, pd_date_01=pd_date_01, pd_start_time_01=pd_start_time_01, project_01=project_01, art_item_01=art_item_01,
+            #                             task_01=task_01, end_time_01=end_time_01, pd_date_02=pd_date_02, pd_start_time_02=pd_start_time_02, project_02=project_02, art_item_02=art_item_02,
+            #                             task_02 = task_02, end_time_02=end_time_02)
+            EmployeeWorkDetails.objects.create(employee_name=emp_name, employee_phone=empl_phone, work_type=work_type, pd_date_01=pd_date_01,pd_start_time_01=pd_start_time_01, project_01=project_01, art_item_01=art_item_01,
+                                        task_01=task_01, end_time_01=end_time_01, pd_date_02=pd_date_02, project_02=project_02, art_item_02=art_item_02,
+                                        task_02 = task_02, pd_start_time_02=pd_start_time_02,end_time_02=end_time_02)
+            error="No"
+        except Exception as e:
+            print("-----",e)
+
+    d={'error':error}
+    print("-----------aaaa-------", d)
+    return render(request,'add_employee_work.html',d)
+
+def view_employee_work(request,pid):
+      
+    work = EmployeeWorkDetails.objects.get(employee_id=pid)
+    d = {'data':work}
+    return render(request,'view_employee_work.html',d)
+
+def delete_employee_work(request,pid):
+
+    data=EmployeeWorkDetails.objects.get(employee_id=pid)
+    data.delete()
+    return redirect('employee_details')
+
+
+def edit_employee_work(request,pid):
+      
+    error=""
+    data = EmployeeWorkDetails.objects.get(employee_id=pid)
+    if request.method=='POST':
+        
+        emp_name = request.POST['employee_name']
+        empl_phone = request.POST['employee_phone']
+        work_type = request.POST.get('work_type')
+        pd_date_01 = request.POST['pd_date_01']
+        pd_start_time_01 = request.POST['pd_start_time_01']
+        pd_start_time_01 = pd_start_time_01 + ':00'
+        project_01 = request.POST['project_01']
+        art_item_01 = request.POST['art_item_01']
+        task_01 = request.POST['task_01']
+        end_time_01 = request.POST['end_time_01']
+        end_time_01 = end_time_01 + ':00'
+        pd_date_02 = request.POST['pd_date_02']
+        pd_start_time_02 = request.POST['pd_start_time_02']
+        pd_start_time_02= pd_start_time_02 + ':00'
+        # project_01 = request.POST['project_01']
+        project_02 =request.POST['project_02']
+        art_item_02 = request.POST['art_item_02']
+        task_02 = request.POST['task_02']
+        end_time_02 =request.POST['end_time_02']
+        end_time_02= end_time_02 + ':00'
+
+        #job.title = jt
+        #job.company = com
+        data.employee_name = emp_name
+        data.employee_phone = empl_phone
+        data.work_type = work_type
+        data.pd_date_01 = pd_date_01
+        data.pd_start_time_01 = pd_start_time_01
+        data.project_01 = project_01
+        data.art_item_01 = art_item_01
+        data.task_01 = task_01
+        data.end_time_01 = end_time_01
+        data.pd_date_02 = pd_date_02
+        data.pd_start_time_02=pd_start_time_02
+        data.project_02 = project_02
+        data.art_item_02 = art_item_02
+        data.task_02 = task_02
+        data.end_time_02 = end_time_02
+        
+        try:
+            data.save()
+            error="No"
+        except:
+            error="Yes"
+    d={'error':error,'data':data} 
+    return render(request,'edit_employee_work.html',d)
+
+
+def print_order(request):
+    
+    return render(request,'print_order.html')
+
+def project_cost_analysis(request):
+    
+    return render(request,'project_cost_analysis.html')
 
 def Logout(request):
     logout(request)

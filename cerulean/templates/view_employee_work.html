@@ -66,20 +66,22 @@
                                             <div class="form-group">
                                                 <label for="employee_name">Employee Name
                                                     <sup>*</sup>
-                                                </label>
-                                                <input class="form-control" type="hidden" name="employee_id">
-                                                <input type="text" name="employee_name" id="employee_name" class="text_field" placeholder="Last Name & First Name" >
+                                                </label><br>
+                                                {{data.employee_name}}
+                                                {% comment %} <input class="form-control" type="hidden" name="employee_id">
+                                                <input type="text" name="employee_name" id="employee_name" class="text_field" placeholder="Last Name & First Name" > {% endcomment %}
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="employee_phone">Phone
                                                     <sup>*</sup>
-                                                </label>
-                                                <input type="text" name="employee_phone" id="employee_phone" class="text_field" placeholder="Enter Phone Number">
+                                                </label><br>
+                                                {{data.employee_phone}}
+                                                {% comment %} <input type="text" name="employee_phone" id="employee_phone" class="text_field" placeholder="Enter Phone Number"> {% endcomment %}
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        {% comment %} <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="work_type">Work Type
                                                     <sup>*</sup>
@@ -92,6 +94,15 @@
                                                     </select>
                                                     <span class="lnr icon-arrow-down"></span>
                                                 </div>
+                                            </div>
+                                        </div> {% endcomment %}
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="work_type">Phone
+                                                    <sup>*</sup>
+                                                </label><br>
+                                                {{data.work_type}}
+                                                {% comment %} <input type="text" name="employee_phone" id="employee_phone" class="text_field" placeholder="Enter Phone Number"> {% endcomment %}
                                             </div>
                                         </div>
                                     </div><!-- ends: .information_wrapper -->
@@ -109,41 +120,47 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="pd_date_01">Date
-                                                    </label>
-                                                    <input type="date" name="pd_date_01" id="pd_date_01" class="text_field" placeholder="Enter Order Date">
+                                                    </label><br>
+                                                    {{data.pd_date_01}}
+                                                    {% comment %} <input type="date" name="pd_date_01" id="pd_date_01" class="text_field" placeholder="Enter Order Date"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="pd_start_time_01">Start Time
-                                                    </label>
-                                                    <input type="time" name="pd_start_time_01" id="pd_start_time_01" class="text_field" placeholder="Enter Order Time">
+                                                    </label><br>
+                                                    {{data.pd_start_time_01}}
+                                                    {% comment %} <input type="time" name="pd_start_time_01" id="pd_start_time_01" class="text_field" placeholder="Enter Order Time"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="project_01">Project
-                                                    </label>
-                                                    <input type="text" name="project_01" id="project_01" class="text_field" placeholder="Enter Project Name"> 
+                                                    </label><br>
+                                                    {{data.project_01}}
+                                                    {% comment %} <input type="text" name="project_01" id="project_01" class="text_field" placeholder="Enter Project Name">  {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="art_item_01">Art Item
-                                                    </label>
-                                                    <input type="text" name="art_item_01" id="art_item_01" class="text_field" placeholder="Enter Art item">
+                                                    </label><br>
+                                                    {{data.art_item_01}}
+                                                    {% comment %} <input type="text" name="art_item_01" id="art_item_01" class="text_field" placeholder="Enter Art item"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="task_01">Task</label>
-                                                    <input type="text" name="task_01" id="task_01" class="text_field" placeholder="Enter Task Name">
+                                                    <label for="task_01">Task</label><br>
+                                                    {{data.task_01}}
+                                                    {% comment %} <input type="text" name="task_01" id="task_01" class="text_field" placeholder="Enter Task Name"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="end_time_01">End Time</label>
-                                                    <input type="time" name="end_time_01" id="end_time_01" class="text_field">
+                                                    <label for="end_time_01">End Time</label><br>
+                                                    {{data.end_time_01}}
+                                                    {% comment %} <input type="time" name="end_time_01" id="end_time_01" class="text_field"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->                                             
                                         </div><!-- ends: .row -->
@@ -162,41 +179,47 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="pd_date_02">Date
-                                                    </label>
-                                                    <input type="date" name="pd_date_02" id="pd_date_02" class="text_field" placeholder="Enter Order Date">
+                                                    </label><br>
+                                                    {{data.pd_date_02}}
+                                                    {% comment %} <input type="date" name="pd_date_02" id="pd_date_02" class="text_field" placeholder="Enter Order Date"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="pd_start_time_02">Start Time
-                                                    </label>
-                                                    <input type="time" name="pd_start_time_02" id="pd_start_time_02" class="text_field" placeholder="Enter Order Time">
+                                                    </label><br>
+                                                    {{data.pd_start_time_02}}
+                                                    {% comment %} <input type="time" name="pd_start_time_02" id="pd_start_time_02" class="text_field" placeholder="Enter Order Time"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="project_02">Project
-                                                    </label>
-                                                    <input type="text" name="project_02" id="project_02" class="text_field" placeholder="Enter Project Name">
+                                                    </label><br>
+                                                    {{data.project_02}}
+                                                    {% comment %} <input type="text" name="project_02" id="project_02" class="text_field" placeholder="Enter Project Name"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="art_item_02">Art Item
-                                                    </label>
-                                                    <input type="text" name="art_item_02" id="art_item_02" class="text_field" placeholder="Enter Art item">
+                                                    </label><br>
+                                                    {{data.art_item_02}}
+                                                    {% comment %} <input type="text" name="art_item_02" id="art_item_02" class="text_field" placeholder="Enter Art item"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="task_02">Task</label>
-                                                    <input type="text" name="task_02" id="task_02" class="text_field" placeholder="Enter Task Name">
+                                                    <label for="task_02">Task</label><br>
+                                                    {{data.task_02}}
+                                                    {% comment %} <input type="text" name="task_02" id="task_02" class="text_field" placeholder="Enter Task Name"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="end_time_02">End Time</label>
-                                                    <input type="time" name="end_time_02" id="end_time_02" class="text_field">
+                                                    <label for="end_time_02">End Time</label><br>
+                                                    {{data.end_time_02}}
+                                                    {% comment %} <input type="time" name="end_time_02" id="end_time_02" class="text_field"> {% endcomment %}
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->                                             
                                         </div><!-- ends: .row -->
@@ -205,14 +228,7 @@
                             </div><!-- ends: .information_module -->
                         </div><!-- ends: .col-md-12 -->
                         
-                        <div class="col-md-12">
-                            <div class="dashboard_setting_btn">
-                                
-                                    <button type="submit" name="add" class="btn btn--md btn-primary">Save Change</button>
-                                    <button type="reset" class="btn btn-md btn-danger">Cancel</button>
-                                </div>    
-                            </div>
-                        </div><!-- ends: .col-md-12 -->
+                        
                     </div><!-- ends: .row -->
                 </form><!-- end /form -->
             </div><!-- ends: .container -->

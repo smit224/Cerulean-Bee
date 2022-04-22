@@ -8,3 +8,4 @@ class UserListShow(admin.ModelAdmin):
 
 admin.site.register(SystemUser,UserListShow)
 admin.site.register(ArtworkOrder)
+admin.site.register(EmployeeWorkDetails)

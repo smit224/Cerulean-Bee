@@ -68,7 +68,7 @@
                                                     <sup>*</sup>
                                                 </label>
                                                 <input class="form-control" type="hidden" name="employee_id">
-                                                <input type="text" name="employee_name" id="employee_name" class="text_field" placeholder="Last Name & First Name" >
+                                                <input type="text" name="employee_name" id="employee_name" class="text_field" placeholder="Last Name & First Name" value="{{data.employee_name}}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -76,7 +76,7 @@
                                                 <label for="employee_phone">Phone
                                                     <sup>*</sup>
                                                 </label>
-                                                <input type="text" name="employee_phone" id="employee_phone" class="text_field" placeholder="Enter Phone Number">
+                                                <input type="text" name="employee_phone" id="employee_phone" class="text_field" value="{{data.employee_phone}}" placeholder="Enter Phone Number">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -85,7 +85,7 @@
                                                     <sup>*</sup>
                                                 </label>
                                                 <div class="select-wrap select-wrap2">
-                                                    <select name="work_type" class="text_field">
+                                                    <select name="work_type" class="text_field" value="{{data.work_type}}">
                                                         <option value="" selected disabled>Choose Employee Work Type</option>
                                                         <option value="Part Time">Part Time</option>
                                                         <option value="Full Time">Full Time</option>
@@ -110,40 +110,40 @@
                                                 <div class="form-group">
                                                     <label for="pd_date_01">Date
                                                     </label>
-                                                    <input type="date" name="pd_date_01" id="pd_date_01" class="text_field" placeholder="Enter Order Date">
+                                                    <input type="date" name="pd_date_01" id="pd_date_01" class="text_field" value="{{data.pd_date_01}}" placeholder="Enter Order Date">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="pd_start_time_01">Start Time
                                                     </label>
-                                                    <input type="time" name="pd_start_time_01" id="pd_start_time_01" class="text_field" placeholder="Enter Order Time">
+                                                    <input type="time" name="pd_start_time_01" id="pd_start_time_01" class="text_field" value="{{data.pd_start_time_01}}" placeholder="Enter Order Time">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="project_01">Project
                                                     </label>
-                                                    <input type="text" name="project_01" id="project_01" class="text_field" placeholder="Enter Project Name"> 
+                                                    <input type="text" name="project_01" id="project_01" class="text_field" value="{{data.project_01}}" placeholder="Enter Project Name"> 
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="art_item_01">Art Item
                                                     </label>
-                                                    <input type="text" name="art_item_01" id="art_item_01" class="text_field" placeholder="Enter Art item">
+                                                    <input type="text" name="art_item_01" id="art_item_01" class="text_field" value="{{data.art_item_01}}" placeholder="Enter Art item">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="task_01">Task</label>
-                                                    <input type="text" name="task_01" id="task_01" class="text_field" placeholder="Enter Task Name">
+                                                    <input type="text" name="task_01" id="task_01" class="text_field" value="{{data.task_01}}" placeholder="Enter Task Name">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="end_time_01">End Time</label>
-                                                    <input type="time" name="end_time_01" id="end_time_01" class="text_field">
+                                                    <input type="time" name="end_time_01" id="end_time_01" class="text_field" value="{{data.end_time_01}}">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->                                             
                                         </div><!-- ends: .row -->
@@ -163,40 +163,40 @@
                                                 <div class="form-group">
                                                     <label for="pd_date_02">Date
                                                     </label>
-                                                    <input type="date" name="pd_date_02" id="pd_date_02" class="text_field" placeholder="Enter Order Date">
+                                                    <input type="date" name="pd_date_02" id="pd_date_02" class="text_field" value="{{data.pd_date_02}}" placeholder="Enter Order Date">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="pd_start_time_02">Start Time
                                                     </label>
-                                                    <input type="time" name="pd_start_time_02" id="pd_start_time_02" class="text_field" placeholder="Enter Order Time">
+                                                    <input type="time" name="pd_start_time_02" id="pd_start_time_02" class="text_field" value="{{data.pd_start_time_02}}" placeholder="Enter Order Time">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="project_02">Project
                                                     </label>
-                                                    <input type="text" name="project_02" id="project_02" class="text_field" placeholder="Enter Project Name">
+                                                    <input type="text" name="project_02" id="project_02" class="text_field" value="{{data.project_02}}" placeholder="Enter Project Name">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="art_item_02">Art Item
                                                     </label>
-                                                    <input type="text" name="art_item_02" id="art_item_02" class="text_field" placeholder="Enter Art item">
+                                                    <input type="text" name="art_item_02" id="art_item_02" class="text_field" value="{{data.art_item_02}}" placeholder="Enter Art item">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="task_02">Task</label>
-                                                    <input type="text" name="task_02" id="task_02" class="text_field" placeholder="Enter Task Name">
+                                                    <input type="text" name="task_02" id="task_02" class="text_field" value="{{data.task_02}}" placeholder="Enter Task Name">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="end_time_02">End Time</label>
-                                                    <input type="time" name="end_time_02" id="end_time_02" class="text_field">
+                                                    <input type="time" name="end_time_02" id="end_time_02" class="text_field" value="{{data.end_time_02}}">
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->                                             
                                         </div><!-- ends: .row -->
@@ -205,14 +205,20 @@
                             </div><!-- ends: .information_module -->
                         </div><!-- ends: .col-md-12 -->
                         
-                        <div class="col-md-12">
+                        {% comment %} <div class="col-md-12">
                             <div class="dashboard_setting_btn">
                                 
                                     <button type="submit" name="add" class="btn btn--md btn-primary">Save Change</button>
                                     <button type="reset" class="btn btn-md btn-danger">Cancel</button>
                                 </div>    
                             </div>
-                        </div><!-- ends: .col-md-12 -->
+                        </div><!-- ends: .col-md-12 --> {% endcomment %}
+                        <div class="col-md-12">
+                            <div class="dashboard_setting_btn">
+                                <button type="submit" name="update" class="btn btn--md btn-primary">Update</button>
+                                <a href="{% url 'employee_details' %}"><button type="button" class="btn btn-md btn-danger">Cancel</button></a>                                
+                            </div>
+                        </div>
                     </div><!-- ends: .row -->
                 </form><!-- end /form -->
             </div><!-- ends: .container -->

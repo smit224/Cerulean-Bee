@@ -33,5 +33,8 @@ urlpatterns = [
     path('view_deatils_artwork/<int:pid>',view_deatils_artwork,name="view_deatils_artwork"),
     path('delete_artwork/<int:pid>',delete_artwork,name="delete_artwork"),
     path('edit_artwork_order/<int:pid>',edit_artwork_order,name="edit_artwork_order"),
+    path('view_employee_work/<int:pid>',view_employee_work,name="view_employee_work"),
+    path('delete_employee_work/<int:pid>',delete_employee_work,name="delete_employee_work"),
+    path('edit_employee_work/<int:pid>',edit_employee_work,name="edit_employee_work"),
     path('Logout',Logout,name="Logout"),
 ]
