@@ -1,19 +1,114 @@
 <!-- Breadcrumb Area -->
-<section class="breadcrumb-area" style="height: 332px;background-image: url('/static/images/WhatsApp Image 2022-04-22 at 7.20.31 PM.jpeg');">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="breadcrumb-contents">
-                    {% comment %} <h2 class="page-title">Cerulean Bee</h2> {% endcomment %}
-                    <div class="breadcrumb">
-                        <ul>
-                            <li>
-                                <span class="icon-settings" style="color:white; padding: 10px;"></span><a href="{% url 'Logout' %}">LOGOUT</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- end .col-md-10 -->
-        </div><!-- end .row -->
-    </div><!-- end .container -->
+
+<!doctype HTML>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DigiPro - Digital Products Marketplace ">
+    <meta name="keywords" content="marketplace, easy digital download, digital product, digital, html5">
+    <title>Employee Work Log | Cerulean Bee</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href={% static 'css/bootstrap/bootstrap.css'%}>
+    <link rel="stylesheet" href={% static 'css/animate.css'%}>
+    <link rel="stylesheet" href={% static 'css/font-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/jquery-ui.css'%}>
+    <link rel="stylesheet" href={% static 'css/line-awesome.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/magnific-popup.css'%}>
+    <link rel="stylesheet" href={% static 'css/owl.carousel.css'%}>
+    <link rel="stylesheet" href={% static 'css/select2.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/simple-line-icons.css'%}>
+    <link rel="stylesheet" href={% static 'css/slick.css'%}>
+    <link rel="stylesheet" href={% static 'css/trumbowyg.min.css'%}>
+    <link rel="stylesheet" href={% static 'css/venobox.css'%}>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {display:none;}
+    </style>
+    
+    
+
+</head>
+
+<body>
+<section>
+   
+    
+    {% comment %} <div class="loop nonloop" style="height: 435px;background-image: url('/static/images/WhatsApp Image 2022-04-22 at 7.20.31 PM.jpeg');"> {% endcomment %}
+        
+            
+            <div class="mySlides" style="height: 435px;background-image: url('/static/images/how-to-start-a-t-shirt-business.jpg');"><a style="display:inline-block;
+                padding:1.3em 4.2em;
+                float:right;
+                margin:45px 4.3em 0.3em 0;
+                border-radius:2em;
+                box-sizing: border-box;
+                text-decoration:none;
+                font-family:'Roboto',sans-serif;
+                font-weight:300;
+                color:#FFFFFF;
+                background-color:#4eb5f1;
+                background-size: auto;
+                text-align:center;
+                transition: all 0.2s;" id="abc" href="{% url 'Logout' %}">LOGOUT</a></div>
+            <div class="mySlides" style="height: 435px;background-image: url('/static/images/1000_F_275650878_uGpzsHPwlO0pWzaZXgjAROLZuiIgFcgz.jpg');background-size:cover;"><a style="display:inline-block;
+                padding:1.3em 4.2em;
+                float:right;
+                margin:45px 4.3em 0.3em 0;
+                border-radius:2em;
+                box-sizing: border-box;
+                text-decoration:none;
+                font-family:'Roboto',sans-serif;
+                font-weight:300;
+                color:#FFFFFF;
+                background-color:#18a899;
+                background-position: top center;
+                text-align:center;
+                transition: all 0.2s;" id="abc" href="{% url 'Logout' %}">LOGOUT</a></div>
+            <div class="mySlides" style="height: 435px;background-image: url('/static/images/Best-49+-Tshirt-Wallpaper-on-HipWallpaper-Tshirt-Wallpaper-.jpg');background-size:cover;"><a style="display:inline-block;
+                padding:1.3em 4.2em;
+                margin: 45px 4.3em 0.3em 0;
+                float:right;
+                border-radius:2em;
+                box-sizing: border-box;
+                text-decoration:none; 
+                font-family:'Roboto',sans-serif;
+                font-weight:300;
+                color:#FFFFFF;
+                background-color:#4eb5f1;
+                text-align:center;
+                transition: all 0.2s;" id="abc" href="{% url 'Logout' %}">LOGOUT</a></div>
+            {% comment %} <img class="mySlides" src="{% static 'images/WhatsApp Image 2022-04-22 at 9.07.17 PM.jpeg' %}" style="height: 250px;background-size:cover;">
+            <img class="mySlides" src="{% static 'images/WhatsApp Image 2022-04-22 at 7.20.31 PM.jpeg' %}" style="height: 250px;background-size:cover;"> {% endcomment %}
+       
+        
+    {% comment %} </div> {% endcomment %}
+    
 </section><!-- ends: .breadcrumb-area -->
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+</body>
+
+{% comment %} <script src="{% static 'static\js\owl-carousel.js' %}"></script>
+<script src="jquery.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script> {% endcomment %}
+</html>

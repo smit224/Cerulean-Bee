@@ -40,5 +40,10 @@ urlpatterns = [
     path('view_print_order/<int:pid>',view_print_order,name='view_print_order'),
     path('edit_print_order/<int:pid>',edit_print_order,name="edit_print_order"),
     path('delete_print_order/<int:pid>',delete_print_order,name="delete_print_order"),
+    path('delete_projectcostanalysis/<int:pid>',delete_projectcostanalysis,name="delete_projectcostanalysis"),
+    path('project_cost_analysis',project_cost_analysis,name='project_cost_analysis'),
+    path('add_project_cost_analysis',add_project_cost_analysis,name='add_project_cost_analysis'),
+    path('edit_project_cost_analysis/<int:pid>',edit_project_cost_analysis,name='edit_project_cost_analysis'),
+    path('view_project_cost_analysis/<int:pid>',view_project_cost_analysis,name='view_project_cost_analysis'),
     path('Logout',Logout,name="Logout"),
 ]

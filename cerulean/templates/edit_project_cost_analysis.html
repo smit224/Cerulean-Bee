@@ -1,0 +1,279 @@
+<!doctype HTML>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Edit Project Cost Analysis | Cerulean Bee
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <!-- inject:css-->
+    <link rel="stylesheet" href="vendor_assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="vendor_assets/css/animate.css">
+    <link rel="stylesheet" href="vendor_assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor_assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="vendor_assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="vendor_assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="vendor_assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="vendor_assets/css/select2.min.css">
+    <link rel="stylesheet" href="vendor_assets/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor_assets/css/slick.css">
+    <link rel="stylesheet" href="vendor_assets/css/trumbowyg.min.css">
+    <link rel="stylesheet" href="vendor_assets/css/venobox.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- endinject -->
+</head>
+
+<body class="dashboard-page preload">
+    
+    {% include 'headermain.html' %}
+    {% include 'header.html' %} 
+
+    <section class="dashboard-area" style="background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #ffffff 100%);">
+        
+        <div class="dashboard_contents p-top-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2>EDIT PROJECT COST ANALYSIS</h2>
+                    </div>
+                    <div class="col-md-2 p-bottom-25"> 
+                        <a href="{% url 'project_cost_analysis' %}">
+                            <button class="btn btn--icon btn-md btn--round btn-secondary" style="float: right;">
+                                <span class="icon-minus" style="padding-right: 10px;"></span>Back
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+
+        <div class="dashboard_contents p-bottom-70">
+            <div class="container">
+                <form method="post" class="setting_form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Project Cost Analysis</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="projectname">Project Name
+                                                </label>
+                                                <input class="form-control" type="hidden" name="project_id" value="<?php print strip_tags($data[0]);?>">
+                                                <input type="text" name="project_name" id="projectname" class="text_field" placeholder="Enter Project Name" value="{{data.project_name}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="event">Event
+                                                </label>
+                                                <input type="text" name="event_name" id="event" class="text_field" placeholder="Enter Event Name" value="{{data.event_name}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="itemid">Item
+                                                </label>
+                                                <input type="text" name="item_name" id="itemid" class="text_field" placeholder="Enter Item Name" value="{{data.item_name}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="customer_name">Customer Name</label>
+                                                <input type="text" name="customer_name" id="customer_name" class="text_field" placeholder="Enter Customer Name" value="{{data.customer_name}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone
+                                                </label>
+                                                <input type="text" name="phonenumber" id="phonenumber" class="text_field" placeholder="Phone Number including Country Code" value="{{data.phonenumber}}">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="withdraw_table_header">
+                                                <h4>Material Costs</h4>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table withdraw__table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Item</th>
+                                                        <th>Per-Unit Cost</th>
+                                                        <th>Price Charged</th>
+                                                        <th>Units</th>
+                                                        <th>Cost</th>
+                                                        <th>Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="text" name="mc_item_01" id="item01" class="text_field" value="{{data.mc_item_01}}"></td>
+                                                        <td><input type="text" name="mc_unitcost_01" id="perunitcost01" class="text_field" value="{{data.mc_unitcost_01}}"></td>
+                                                        <td><input type="text" name="mc_pricecharge_01" id="pricecharged01" class="text_field" value="{{data.mc_pricecharge_01}}"></td>
+                                                        <td><input type="text" name="mc_units_01" id="unit01" class="text_field" value="{{data.mc_units_01}}"></td>
+                                                        <td><input type="text" name="mc_cost_01" id="cost01" class="text_field" value="{{data.mc_cost_01}}"></td>
+                                                        <td><input type="text" name="mc_revenue_01" id="revenue01" class="text_field" value="{{data.mc_revenue_01}}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" name="mc_item_02" id="item01" class="text_field" value="{{data.mc_item_02}}"></td>
+                                                        <td><input type="text" name="mc_unitcost_02" id="perunitcost01" class="text_field" value="{{data.mc_unitcost_02}}"></td>
+                                                        <td><input type="text" name="mc_pricecharge_02" name="mc_pricecharge_02" id="pricecharged01" class="text_field" value="{{data.mc_pricecharge_02}}"></td>
+                                                        <td><input type="text" name="mc_units_02" id="unit01" class="text_field" value="{{data.mc_units_02}}"></td>
+                                                        <td><input type="text" name="mc_cost_02" id="cost01" class="text_field" value="{{data.mc_cost_02}}"></td>
+                                                        <td><input type="text" name="mc_revenue_02" id="revenue01" class="text_field" value="{{data.mc_revenue_02}}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td><label>Total</label><input type="text" name="totalcost_01" id="revenue01" class="text_field" value="{{data.totalcost_01}}"></td>
+                                                        <td><label>Total</label><input type="text" name="totalrevenue_01" id="revenue01" class="text_field" value="{{data.totalrevenue_01}}"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="withdraw_table_header">
+                                                <h4>Labour Costs</h4>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table withdraw__table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Employee</th>
+                                                        <th>Task</th>
+                                                        <th>Time</th>
+                                                        <th>Wage Rate</th>
+                                                        <th>Cost</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="text" name="lc_item_01" id="item01" class="text_field" value="{{data.lc_item_01}}"></td>
+                                                        <td><input type="text" name="lc_unitcost_01" id="perunitcost01" class="text_field" value="{{data.lc_unitcost_01}}"></td>
+                                                        <td><input type="text" name="lc_pricecharge_01" id="pricecharged01" class="text_field" value="{{data.lc_pricecharge_01}}"></td>
+                                                        <td><input type="text" name="lc_units_01" id="unit01" class="text_field" value="{{data.lc_units_01}}"></td>
+                                                        <td><input type="text" name="lc_cost_01" id="cost01" class="text_field" value="{{data.lc_cost_01}}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" name="lc_item_02" id="item01" class="text_field" value="{{data.lc_item_02}}"></td>
+                                                        <td><input type="text" name="lc_unitcost_02" id="perunitcost01" class="text_field" value="{{data.lc_unitcost_02}}"></td>
+                                                        <td><input type="text" name="lc_pricecharge_02" id="pricecharged01" class="text_field" value="{{data.lc_pricecharge_02}}"></td>
+                                                        <td><input type="text" name="lc_units_02" id="unit01" class="text_field" value="{{data.lc_units_02}}"></td>
+                                                        <td><input type="text" name="lc_cost_02" id="cost01" class="text_field" value="{{data.lc_cost_02}}"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td><label>Total</label><input type="text" name="totalrevenue_02" id="revenue01" class="text_field" value="{{data.totalrevenue_02}}"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div><!-- ends: .information_wrapper -->
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                        <div class="col-md-12">
+                            <div class="information_module">
+                                <div class="toggle_title">
+                                    <h4>Total Money Received</h4>
+                                </div>
+                                <div class="information__set">
+                                    <div class="information_wrapper form--fields">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="materialcharge">Material Charge
+                                                    </label>
+                                                    <input type="text" name="material_charge" id="materialcharge" class="text_field" placeholder="Enter Amount" value="{{data.material_charge}}">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="artworkfees">Artwork Fees
+                                                    </label>
+                                                    <input type="text" name="artwork_fees" id="artworkfees" class="text_field" placeholder="Enter Amount" value="{{data.artwork_fees}}">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="fixedcharges">Fixed Charges
+                                                    </label>
+                                                    <input type="text" name="fixed_charges" id="fixedcharges" class="text_field" placeholder="Enter Amount" value="{{data.fixed_charges}}">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="totaldiscounts">Discounts
+                                                    </label>
+                                                    <input type="text" name="total_discounts" id="totaldiscounts" class="text_field" placeholder="Enter Amount" value="{{data.total_discounts}}">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="netprofit">Net Profit
+                                                    </label>
+                                                    <input type="text" name="net_profits" id="netprofit" class="text_field" placeholder="Enter Amount" value="{{data.net_profits}}">
+                                                </div>
+                                            </div><!-- ends: .col-md-6 -->                                
+                                        </div><!-- ends: .row -->
+                                    </div>
+                                </div><!-- ends: .information__set -->
+                            </div><!-- ends: .information_module -->
+                        </div><!-- ends: .col-md-12 -->
+                                                
+                        <div class="col-md-12">
+                            <div class="dashboard_setting_btn">
+                                
+                                    <button type="submit" name="update" class="btn btn--md btn-primary">Update</button>
+                                    <a href="{% url 'project_cost_analysis' %}"><button type="button" class="btn btn-md btn-danger">Cancel</button></a>
+                                   
+                            
+                                 
+                                </div>   
+                            </div>
+                        </div><!-- ends: .col-md-12 -->
+                    </div><!-- ends: .row -->
+                </form><!-- end /form -->
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+
+            
+    </section><!-- ends: .dashboard-area -->
+
+</body>
+</html>
+
+{% if error == "No" %}
+<script>
+    alert("Data added successful");
+    window.location = ("{% url 'project_cost_analysis' %}")
+</script>
+{% endif %}
+
+{% if error == "Yes" %}
+<script>
+    alert("Try again");
+</script>
+{% endif %}
+    

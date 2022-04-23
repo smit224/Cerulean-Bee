@@ -30,17 +30,18 @@
     {% include 'headermain.html' %}
     {% include 'header.html' %}
     
-    <section class="dashboard-area">
+    <section class="dashboard-area" style="background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #ffffff 100%);">
         
         
         
-        <div class="dashboard_contents p-top-150 p-bottom-150" style="min-height:63vh">
+        <div class="dashboard_contents p-top-150 p-bottom-150" style="min-height:63vh;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">
                         <div class="author-info author-info--dashboard">
                             <h1 class="primary">
-                                
+                             {{artcount}}   
                             </h1>
                             <p>Artwork Order</p>
                         </div>
@@ -48,7 +49,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="author-info author-info--dashboard">
                             <h1 class="secondary">
-                                
+                                {{emp_work_count}} 
                             </h1>
                             <p>Employee Work Details</p>
                         </div>
@@ -56,7 +57,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="author-info author-info--dashboard">
                             <h1 class="info">
-                                
+                                {{print_order_count}}
                             </h1>
                             <p>Print Orders</p>
                         </div>
@@ -64,7 +65,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="author-info author-info--dashboard">
                             <h1 class="danger">
-                                
+                                {{project_cost_analysis_count}}
                             </h1>
                             <p>Project Cost Analysis</p>
                         </div>

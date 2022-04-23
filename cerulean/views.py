@@ -16,17 +16,18 @@ def index(request):
     if request.method=='POST':
         em = request.POST['username']
         pas = request.POST['password']
-        user = SystemUser.objects.get(username=em,password=pas)
-        print("------------",user,"-----------")
-        if user:
-           #print("------------user found----------")
-           #login(request,user)
-           error="no"
-        else:
+        try:
+            user = SystemUser.objects.get(username=em,password=pas)
+            #print("------------",user,"-----------")
+            if user:
+                error="no"
+            else:
+                error="yes"
+        except:
             error="yes"
-    d={'error':error}    
+    d={'error':error}  
+    print('==========',error,'===========')  
     return render(request,'index.html',d)
-    
 
 def signup(request):
     error=""
@@ -47,8 +48,16 @@ def signup(request):
     return render(request,'signup.html',d)
 
 def home(request):
-    
-    return render(request,'home.html')
+    artcount = ArtworkOrder.objects.all().count()
+    print("=-=--=artcount-=-==-=", artcount)
+    emp_work_count = EmployeeWorkDetails.objects.all().count() 
+    print("=-=--=artcount-=-==-=", emp_work_count)
+    print_order_count = PrintOrder.objects.all().count()
+    print("=-=--=artcount-=-==-=", print_order_count) 
+    project_cost_analysis_count = ProjectCostAnalysis.objects.all().count() 
+    print("=-=--=artcount-=-==-=", project_cost_analysis_count)
+    d={'artcount':artcount,'emp_work_count':emp_work_count,'print_order_count': print_order_count, 'project_cost_analysis_count':project_cost_analysis_count}
+    return render(request,'home.html',d)
 
 def artwork_order(request):
     print("-=-=-=-sk98rt-=-=-")
@@ -465,9 +474,202 @@ def delete_print_order(request,pid):
 
 
 #PROJECT COST ANALYSIS
+def delete_projectcostanalysis(request,pid):
+
+    data=ProjectCostAnalysis.objects.get(project_id=pid)
+    data.delete()
+    return redirect('project_cost_analysis')
+
+
 def project_cost_analysis(request):
-    
-    return render(request,'project_cost_analysis.html')
+    data=ProjectCostAnalysis.objects.all()
+    d = {'data':data}
+    return render(request,'project_cost_analysis.html',d)
+
+def add_project_cost_analysis(request):
+
+    error=""
+    if request.method=='POST':
+        project_name = 	request.POST['project_name']
+        event_name	= request.POST['event_name']
+        item_name = request.POST['item_name']	
+        customer_name = request.POST['customer_name']	
+        phonenumber	= request.POST['phonenumber']
+        mc_item_01 = request.POST['mc_item_01']	
+        mc_unitcost_01	= request.POST['mc_unitcost_01']
+        mc_pricecharge_01 = request.POST['mc_pricecharge_01']
+        mc_units_01	= request.POST['mc_units_01']
+        mc_cost_01	= request.POST['mc_cost_01']
+        mc_revenue_01 = request.POST['mc_revenue_01']
+        mc_item_02	= request.POST['mc_item_02']
+        mc_unitcost_02	= request.POST['mc_unitcost_02']
+        mc_pricecharge_02 = request.POST['mc_pricecharge_02']	
+        mc_units_02	= request.POST['mc_units_02']
+        mc_cost_02 = request.POST['mc_cost_02']	
+        mc_revenue_02 = request.POST['mc_revenue_02']	
+        totalcost_01 = request.POST['totalcost_01']	
+        totalrevenue_01	= request.POST['totalrevenue_01']
+        lc_item_01 = request.POST['lc_item_01']	
+        lc_unitcost_01 = request.POST['lc_unitcost_01']	
+        lc_pricecharge_01 = request.POST['lc_pricecharge_01']	
+        lc_units_01	= request.POST['lc_units_01']
+        lc_cost_01	= request.POST['lc_cost_01']
+        lc_revenue_01 = str(int(lc_cost_01)*int(lc_units_01))
+        lc_item_02 = request.POST['lc_item_02']	
+        lc_unitcost_02 = request.POST['lc_unitcost_02']	
+        lc_pricecharge_02 = request.POST['lc_pricecharge_02']	
+        lc_units_02	= request.POST['lc_units_02']
+        lc_cost_02	= request.POST['lc_cost_02']
+        lc_revenue_02 = str(int(lc_cost_02)*int(lc_units_02))
+        totalrevenue_02 = request.POST['totalrevenue_02']	
+        material_charge	= request.POST['material_charge']
+        artwork_fees = request.POST['artwork_fees']	
+        fixed_charges = request.POST['fixed_charges']	
+        total_discounts	= request.POST['total_discounts']
+        net_profits = request.POST['net_profits']
+
+        try:   
+            ProjectCostAnalysis.objects.create(project_name=project_name,event_name= event_name,
+                                                item_name=item_name,	
+                                                customer_name=customer_name,
+                                                phonenumber=phonenumber,	
+                                                mc_item_01=mc_item_01,	
+                                                mc_unitcost_01=mc_unitcost_01,	
+                                                mc_pricecharge_01=mc_pricecharge_01,	
+                                                mc_units_01=mc_units_01,	
+                                                mc_cost_01=mc_cost_01,	
+                                                mc_revenue_01=mc_revenue_01,	
+                                                mc_item_02=mc_item_02,	
+                                                mc_unitcost_02=mc_unitcost_02,	
+                                                mc_pricecharge_02=mc_pricecharge_02,	
+                                                mc_units_02=mc_units_02,	
+                                                mc_cost_02=mc_cost_02,	
+                                                mc_revenue_02=mc_revenue_02,	
+                                                totalcost_01=totalcost_01,	
+                                                totalrevenue_01=totalrevenue_01,	
+                                                lc_item_01=lc_item_01,	
+                                                lc_unitcost_01=	lc_unitcost_01,
+                                                lc_pricecharge_01=lc_pricecharge_01,	
+                                                lc_units_01	= lc_units_01,
+                                                lc_cost_01=lc_cost_01,	
+                                                lc_revenue_01 = lc_revenue_01,
+                                                lc_item_02 = lc_item_02,	
+                                                lc_unitcost_02 = lc_unitcost_02,	
+                                                lc_pricecharge_02 = lc_pricecharge_02,	
+                                                lc_units_02 = lc_units_02,	
+                                                lc_cost_02 = lc_cost_02,	
+                                                lc_revenue_02 = lc_revenue_02,	
+                                                totalrevenue_02 = totalrevenue_02,	
+                                                material_charge = material_charge,	
+                                                artwork_fees = artwork_fees,	
+                                                fixed_charges = fixed_charges,	
+                                                total_discounts = total_discounts,	
+                                                net_profits=net_profits)
+            error="No"
+        except Exception as e:
+            print("-----",e)
+            error="Yes"
+    d={'error':error}
+    return render(request,'add_project_cost_analysis.html',d)
+
+
+def edit_project_cost_analysis(request,pid):
+      
+    error=""
+    data = ProjectCostAnalysis.objects.get(project_id=pid)
+    if request.method=='POST':
+        
+        project_name = 	request.POST['project_name']
+        event_name	= request.POST['event_name']
+        item_name = request.POST['item_name']	
+        customer_name = request.POST['customer_name']	
+        phonenumber	= request.POST['phonenumber']
+        mc_item_01 = request.POST['mc_item_01']	
+        mc_unitcost_01	= request.POST['mc_unitcost_01']
+        mc_pricecharge_01 = request.POST['mc_pricecharge_01']
+        mc_units_01	= request.POST['mc_units_01']
+        mc_cost_01	= request.POST['mc_cost_01']
+        mc_revenue_01 = request.POST['mc_revenue_01']
+        mc_item_02	= request.POST['mc_item_02']
+        mc_unitcost_02	= request.POST['mc_unitcost_02']
+        mc_pricecharge_02 = request.POST['mc_pricecharge_02']	
+        mc_units_02	= request.POST['mc_units_02']
+        mc_cost_02 = request.POST['mc_cost_02']	
+        mc_revenue_02 = request.POST['mc_revenue_02']	
+        totalcost_01 = request.POST['totalcost_01']	
+        totalrevenue_01	= request.POST['totalrevenue_01']
+        lc_item_01 = request.POST['lc_item_01']	
+        lc_unitcost_01 = request.POST['lc_unitcost_01']	
+        lc_pricecharge_01 = request.POST['lc_pricecharge_01']	
+        lc_units_01	= request.POST['lc_units_01']
+        lc_cost_01	= request.POST['lc_cost_01']
+        lc_revenue_01 = str(int(lc_cost_01)*int(lc_units_01))
+        lc_item_02 = request.POST['lc_item_02']	
+        lc_unitcost_02 = request.POST['lc_unitcost_02']	
+        lc_pricecharge_02 = request.POST['lc_pricecharge_02']	
+        lc_units_02	= request.POST['lc_units_02']
+        lc_cost_02	= request.POST['lc_cost_02']
+        lc_revenue_02 = str(int(lc_cost_02)*int(lc_units_02))
+        totalrevenue_02 = request.POST['totalrevenue_02']	
+        material_charge	= request.POST['material_charge']
+        artwork_fees = request.POST['artwork_fees']	
+        fixed_charges = request.POST['fixed_charges']	
+        total_discounts	= request.POST['total_discounts']
+        net_profits = request.POST['net_profits']
+
+        #job.title = jt
+        #job.company = com
+        data.project_name = 	project_name
+        data.event_name	= event_name
+        data.item_name = item_name
+        data.customer_name = customer_name
+        data.phonenumber	= phonenumber
+        data.mc_item_01 = mc_item_01
+        data.mc_unitcost_01	= mc_unitcost_01
+        data.mc_pricecharge_01 = mc_pricecharge_01
+        data.mc_units_01	= mc_units_01
+        data.mc_cost_01	= mc_cost_01
+        data.mc_revenue_01 = mc_revenue_01
+        data.mc_item_02	= mc_item_02
+        data.mc_unitcost_02	= mc_unitcost_02
+        data.mc_pricecharge_02 = mc_pricecharge_02	
+        data.mc_units_02	= mc_units_02
+        data.mc_cost_02 = mc_cost_02	
+        data.mc_revenue_02 = mc_revenue_02
+        data.totalcost_01 = totalcost_01
+        data.totalrevenue_01	= totalrevenue_01
+        data.lc_item_01 = lc_item_01
+        data.lc_unitcost_01 = lc_unitcost_01
+        data.lc_pricecharge_01 = lc_pricecharge_01
+        data.lc_units_01	= lc_units_01
+        data.lc_cost_01	= lc_cost_01
+        data.lc_revenue_01 = str(int(lc_cost_01)*int(lc_units_01))
+        data.lc_item_02 = lc_item_02
+        data.lc_unitcost_02 = lc_unitcost_02	
+        data.lc_pricecharge_02 = lc_pricecharge_02	
+        data.lc_units_02	= lc_units_02
+        data.lc_cost_02	= lc_cost_02
+        data.lc_revenue_02 = str(int(lc_cost_02)*int(lc_units_02))
+        data.totalrevenue_02 = totalrevenue_02
+        data.material_charge	= material_charge
+        data.artwork_fees = artwork_fees
+        data.fixed_charges = fixed_charges
+        data.total_discounts	= total_discounts
+        data.net_profits = net_profits
+        
+        try:
+            data.save()
+            error="No"
+        except:
+            error="Yes"
+    d={'error':error,'data':data} 
+    return render(request,'edit_project_cost_analysis.html',d)
+
+def view_project_cost_analysis(request,pid):
+      
+    work = ProjectCostAnalysis.objects.get(project_id=pid)
+    d = {'data':work}
+    return render(request,'view_project_cost_analysis.html',d)
 
 def Logout(request):
     logout(request)

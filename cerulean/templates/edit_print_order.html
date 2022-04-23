@@ -32,7 +32,8 @@
 
     {% include 'headermain.html' %}
     {% include 'header.html' %} 
-    <section class="dashboard-area">
+    <section class="dashboard-area" style="background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #ffffff 100%);">
         
     
         
@@ -364,8 +365,9 @@
                         <div class="col-md-12">
                             <div class="dashboard_setting_btn">
                                 
-                                <button type="submit" name="add" class="btn btn--md btn-primary">Save Change</button>
-                                <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                               
+                                <button type="submit" name="update" class="btn btn--md btn-primary">Update</button>
+                                    <a href="{% url 'print_order' %}"><button type="button" class="btn btn-md btn-danger">Cancel</button></a>
                             </div>    
                         </div>
                         </div><!-- ends: .col-md-12 -->

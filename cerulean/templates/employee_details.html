@@ -23,7 +23,7 @@
     <link rel="stylesheet" href={% static 'css/slick.css'%}>
     <link rel="stylesheet" href={% static 'css/trumbowyg.min.css'%}>
     <link rel="stylesheet" href={% static 'css/venobox.css'%}>
-    <link rel="stylesheet" href={% static 'style.css' %}>
+    <link rel="stylesheet" href={% static 'static/style.css' %}>
     <!-- endinject -->
 </head>
 
@@ -31,9 +31,11 @@
     
     {% include 'headermain.html' %}
     {% include 'header.html' %} 
-    <section class="dashboard-area">
+    <section class="dashboard-area" style="background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #ffffff 100%);">
 
-        <div class="dashboard_contents p-top-50 p-bottom-70">
+        <div class="dashboard_contents p-top-50 p-bottom-70" style="background-color: #FAACA8;
+        background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 p-bottom-25"> 
@@ -51,7 +53,7 @@
                                         <th style="color : white;">Phone</th>
                                         <th style="color : white;">Order Date</th>
                                         <th style="color : white;">Delivered Date</th>
-                                        <th style="color : white;">Total Price</th>
+                                        <th style="color : white;">Task</th>
                                         {% comment %} <th style="color : white;">Action</th> {% endcomment %}
                                     </tr>
                                 </thead>
@@ -63,8 +65,8 @@
                                             <td style="color : white; font-size : 16px;">{{i.employee_phone}}</td>
                                             <td style="color : white; font-size : 16px;">{{i.work_type}}</td>
                                             <td style="color : white; font-size : 16px;">{{i.pd_date_01}}</td>
-                                            <td style="color : white; font-size : 16px;">{{i.pd_start_time_01}}</td>
-                                            <td style="color : white; font-size : 16px;">{{i.pd_start_time_01}}</td>
+                                            <td style="color : white; font-size : 16px;">{{i.task_01}}</td>
+                                            {% comment %} <td style="color : white; font-size : 16px;">{{i.pd_start_time_01}}</td> {% endcomment %}
                                             <td style="color : white; font-size : 16px;">
                                             <a href="{% url 'view_employee_work' i.employee_id %}"><button class="btn btn-primary mb-2 mr-2 square" title="View Details"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></button></a>
                                             <a href="{% url 'edit_employee_work' i.employee_id %}"><button class="btn btn-warning mb-2 mr-2 square" title="Edit Details"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button></a>
