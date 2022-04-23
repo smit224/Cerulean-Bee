@@ -365,6 +365,104 @@ def view_print_order(request,pid):
     d = {'data':work}
     return render(request,'view_print_order.html',d)
 
+def edit_print_order(request,pid):
+      
+    error=""
+    data = PrintOrder.objects.get(customer_id=pid)
+    if request.method=='POST':
+        
+        customername = request.POST['customername']
+        orderdate = request.POST['orderdate']
+        emailid = request.POST['emailid']
+        artdate = request.POST['artdate']
+        phonenumber = request.POST['phonenumber']
+        duedate = request.POST['duedate']
+        setupcharge = request.POST['setupcharge']
+        apparelorderdate = request.POST['apparelorderdate']
+        deposit = request.POST['deposit']
+        filmdate = request.POST['filmdate']
+        discount = request.POST['discount']
+        printdate = request.POST['printdate']
+        totalcost = request.POST['totalcost']
+        basecolor = request.POST['basecolor']
+        vendorname = request.POST['vendorname']
+        xsnumber = request.POST['xsnumber']
+        xscharge = request.POST['xscharge']
+        snumber = request.POST['snumber']
+        scharge = request.POST['scharge']
+        mnumber = request.POST['mnumber']
+        mcharge = request.POST['mcharge']
+        lnumber = request.POST['lnumber']
+        lcharge = request.POST['lcharge']
+        xlnumber = request.POST['xlnumber']
+        xlcharge = request.POST['xlcharge']
+        xxlnumber = request.POST['xxlnumber']
+        xxlcharge = request.POST['xxlcharge']
+        unitbaseprice = request.POST['unitbaseprice']
+        colorcharge = request.POST['colorcharge']
+        blankprice = request.POST['blankprice']
+        locationsize = request.POST['locationsize']
+        colorchange = request.POST['colorchange']
+        colorlist = request.POST['colorlist']
+        finalcost = request.POST['finalcost']
+
+        #job.title = jt
+        #job.company = com
+        data.customername = customername
+        data.orderdate = orderdate
+        data.emailid = emailid
+        data.artdate = artdate
+        data.phonenumber = phonenumber
+        data.duedate = duedate
+        data.setupcharge = setupcharge
+        data.apparelorderdate = apparelorderdate
+        data.deposit = deposit
+        data.filmdate = filmdate
+        data.discount=discount
+        data.printdate = printdate
+        data.totalcost = totalcost
+        data.basecolor = basecolor
+        data.vendorname = vendorname
+        data.xsnumber = xsnumber
+        data.xscharge = xscharge
+        data.snumber = snumber
+        data.scharge = scharge
+        data.mnumber = mnumber
+        data.mcharge = mcharge
+        data.lnumber = lnumber
+        data.lcharge = lcharge
+        data.xlnumber = xlnumber
+        data.xlcharge = xlcharge
+        data.xxlnumber = xxlnumber
+        data.xxlcharge = xxlcharge
+        data.unitbaseprice = unitbaseprice
+        data.colorcharge = colorcharge
+        data.blankprice = blankprice
+        data.locationsize = locationsize
+        data.colorchange = colorchange
+        data.colorlist = colorlist
+        data.finalcost = finalcost
+        
+        try:
+            data.save()
+            error="No"
+        except:
+            error="Yes"
+    d={'error':error,'data':data} 
+    return render(request,'edit_print_order.html',d)
+
+def view_print_order(request,pid):
+      
+    work = PrintOrder.objects.get(customer_id=pid)
+    d = {'data':work}
+    return render(request,'view_print_order.html',d)
+
+def delete_print_order(request,pid):
+
+    data=PrintOrder.objects.get(customer_id=pid)
+    data.delete()
+    return redirect('print_order')
+
 
 #PROJECT COST ANALYSIS
 def project_cost_analysis(request):
