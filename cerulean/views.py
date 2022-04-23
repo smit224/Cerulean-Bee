@@ -17,7 +17,7 @@ def index(request):
         em = request.POST['username']
         pas = request.POST['password']
         user = SystemUser.objects.get(username=em,password=pas)
-        #print("------------",user,"-----------")
+        print("------------",user,"-----------")
         if user:
            #print("------------user found----------")
            #login(request,user)
