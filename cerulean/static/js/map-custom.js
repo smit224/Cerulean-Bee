@@ -56,7 +56,7 @@
                 "elementType": "geometry.fill",
                 "stylers": [
                 {
-                    "color": "#ffffff"
+                    "color": "#313342"
                 },
                 {
                     "lightness": 17
@@ -68,7 +68,7 @@
                 "elementType": "geometry.stroke",
                 "stylers": [
                 {
-                    "color": "#ffffff"
+                    "color": "#313342"
                 },
                 {
                     "lightness": 29
@@ -83,7 +83,7 @@
                 "elementType": "geometry",
                 "stylers": [
                 {
-                    "color": "#ffffff"
+                    "color": "#313342"
                 },
                 {
                     "lightness": 18
@@ -95,7 +95,7 @@
                 "elementType": "geometry",
                 "stylers": [
                 {
-                    "color": "#ffffff"
+                    "color": "#313342"
                 },
                 {
                     "lightness": 16
@@ -133,7 +133,7 @@
                     "visibility": "on"
                 },
                 {
-                    "color": "#ffffff"
+                    "color": "#313342"
                 },
                 {
                     "lightness": 16

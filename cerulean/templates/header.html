@@ -21,7 +21,11 @@
                     <li class="nav-link {% if request.path == '/project_cost_analysis' %} active {% endif %}">
                         <a href="{% url 'project_cost_analysis' %}"><span class="lnr icon-chart"></span>Project Cost Analysis</a>
                     </li>
+                    <li>
+                    <a class="nav-link" href="{% url 'Logout' %}">LOGOUT</a>
+                    </li>
                 </ul><!-- ends: .dashboard_menu -->
+               
             </div><!-- ends: .col-md-12 -->
         </div><!-- ends: .row -->
     </div><!-- ends: .container -->

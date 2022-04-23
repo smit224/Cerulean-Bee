@@ -117,7 +117,7 @@
                                                 <div class="form-group">
                                                     <label for="pd_start_time_01">Start Time
                                                     </label>
-                                                    <input type="time" name="pd_start_time_01" id="pd_start_time_01" class="text_field" value="{{data.pd_start_time_01}}" placeholder="Enter Order Time">
+                                                    <input type="time" name="pd_start_time_01" id="pd_start_time_01" class="text_field" value="{{data.pd_start_time_01 | time:'I:M p'}}" placeholder="Enter Order Time"></input>
                                                 </div>
                                             </div><!-- ends: .col-md-6 -->
                                             <div class="col-md-6">

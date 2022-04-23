@@ -1494,42 +1494,42 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .color-light {
-  color: #ffffff;
+  color: #313342;
 }
 
 .bg-light, .bg-white {
-  background: #ffffff;
+  background: #313342;
 }
 
 .iborder-light {
-  color: #ffffff;
+  color: #313342;
 }
 
 .outline-light {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #313342;
+  color: #313342;
 }
 
 .active-color-light label input:checked + span, .active-color-light .form-group p.label input:checked + span, .form-group .active-color-light p.label input:checked + span {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #313342;
+  border-color: #313342;
 }
 
 .circle-light {
-  color: #ffffff;
+  color: #313342;
   background: rgba(255, 255, 255, 0.1);
 }
 
 .border-light {
-  border: 1px solid #ffffff;
+  border: 1px solid #313342;
 }
 
 .b-light {
-  border-color: #ffffff !important;
+  border-color: #313342 !important;
 }
 
 .b-bottom-10-light {
-  border-bottom: 10px solid #ffffff;
+  border-bottom: 10px solid #313342;
 }
 
 .color-dark {
@@ -1632,7 +1632,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-0-light {
-  border-top: 0px solid #ffffff;
+  border-top: 0px solid #313342;
 }
 
 .b-top-0-dark {
@@ -1664,7 +1664,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-1-light {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #313342;
 }
 
 .b-top-1-dark {
@@ -1696,7 +1696,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-2-light {
-  border-top: 2px solid #ffffff;
+  border-top: 2px solid #313342;
 }
 
 .b-top-2-dark {
@@ -1728,7 +1728,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-3-light {
-  border-top: 3px solid #ffffff;
+  border-top: 3px solid #313342;
 }
 
 .b-top-3-dark {
@@ -1760,7 +1760,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-4-light {
-  border-top: 4px solid #ffffff;
+  border-top: 4px solid #313342;
 }
 
 .b-top-4-dark {
@@ -1792,7 +1792,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-5-light {
-  border-top: 5px solid #ffffff;
+  border-top: 5px solid #313342;
 }
 
 .b-top-5-dark {
@@ -1824,7 +1824,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-0-light {
-  border-right: 0px solid #ffffff;
+  border-right: 0px solid #313342;
 }
 
 .b-right-0-dark {
@@ -1856,7 +1856,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-1-light {
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #313342;
 }
 
 .b-right-1-dark {
@@ -1888,7 +1888,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-2-light {
-  border-right: 2px solid #ffffff;
+  border-right: 2px solid #313342;
 }
 
 .b-right-2-dark {
@@ -1920,7 +1920,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-3-light {
-  border-right: 3px solid #ffffff;
+  border-right: 3px solid #313342;
 }
 
 .b-right-3-dark {
@@ -1952,7 +1952,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-4-light {
-  border-right: 4px solid #ffffff;
+  border-right: 4px solid #313342;
 }
 
 .b-right-4-dark {
@@ -1984,7 +1984,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-5-light {
-  border-right: 5px solid #ffffff;
+  border-right: 5px solid #313342;
 }
 
 .b-right-5-dark {
@@ -2016,7 +2016,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-0-light {
-  border-bottom: 0px solid #ffffff;
+  border-bottom: 0px solid #313342;
 }
 
 .b-bottom-0-dark {
@@ -2048,7 +2048,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-1-light {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #313342;
 }
 
 .b-bottom-1-dark {
@@ -2080,7 +2080,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-2-light {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #313342;
 }
 
 .b-bottom-2-dark {
@@ -2112,7 +2112,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-3-light {
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid #313342;
 }
 
 .b-bottom-3-dark {
@@ -2144,7 +2144,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-4-light {
-  border-bottom: 4px solid #ffffff;
+  border-bottom: 4px solid #313342;
 }
 
 .b-bottom-4-dark {
@@ -2176,7 +2176,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-5-light {
-  border-bottom: 5px solid #ffffff;
+  border-bottom: 5px solid #313342;
 }
 
 .b-bottom-5-dark {
@@ -2208,7 +2208,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-0-light {
-  border-left: 0px solid #ffffff;
+  border-left: 0px solid #313342;
 }
 
 .b-left-0-dark {
@@ -2240,7 +2240,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-1-light {
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid #313342;
 }
 
 .b-left-1-dark {
@@ -2272,7 +2272,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-2-light {
-  border-left: 2px solid #ffffff;
+  border-left: 2px solid #313342;
 }
 
 .b-left-2-dark {
@@ -2305,7 +2305,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-3-light {
-  border-left: 3px solid #ffffff;
+  border-left: 3px solid #313342;
 }
 
 .b-left-3-dark {
@@ -2337,7 +2337,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-4-light {
-  border-left: 4px solid #ffffff;
+  border-left: 4px solid #313342;
 }
 
 .b-left-4-dark {
@@ -2369,7 +2369,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-5-light {
-  border-left: 5px solid #ffffff;
+  border-left: 5px solid #313342;
 }
 
 .b-left-5-dark {
@@ -2401,7 +2401,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-0-light {
-  border: 0px solid #ffffff !important;
+  border: 0px solid #313342 !important;
 }
 
 .b-0-dark {
@@ -2434,7 +2434,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-1-light {
-  border: 1px solid #ffffff !important;
+  border: 1px solid #313342 !important;
 }
 
 .b-1-dark {
@@ -2466,7 +2466,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-2-light {
-  border: 2px solid #ffffff !important;
+  border: 2px solid #313342 !important;
 }
 
 .b-2-dark {
@@ -2498,7 +2498,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-3-light {
-  border: 3px solid #ffffff !important;
+  border: 3px solid #313342 !important;
 }
 
 .b-3-dark {
@@ -2530,7 +2530,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-4-light {
-  border: 4px solid #ffffff !important;
+  border: 4px solid #313342 !important;
 }
 
 .b-4-dark {
@@ -2562,7 +2562,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-5-light {
-  border: 5px solid #ffffff !important;
+  border: 5px solid #313342 !important;
 }
 
 .b-5-dark {
@@ -2654,9 +2654,9 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .outline-lg-light {
-  border: 2px solid #ffffff;
+  border: 2px solid #313342;
   background: none;
-  color: #ffffff;
+  color: #313342;
 }
 
 .outline-lg-dark {
@@ -2675,7 +2675,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-primary .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-secondary .custom-control-label::before {
@@ -2688,7 +2688,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-secondary .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-success .custom-control-label::before {
@@ -2701,7 +2701,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-success .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-info .custom-control-label::before {
@@ -2714,7 +2714,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-info .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-warning .custom-control-label::before {
@@ -2727,7 +2727,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-warning .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-danger .custom-control-label::before {
@@ -2740,20 +2740,20 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-danger .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-light .custom-control-label::before {
-  background: #ffffff;
+  background: #313342;
 }
 
 .checkbox-light .custom-control-input:checked ~ .custom-control-label::before {
-  background: #ffffff;
-  border: 1px solid #ffffff;
+  background: #313342;
+  border: 1px solid #313342;
 }
 
 .checkbox-light .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-dark .custom-control-label::before {
@@ -2766,7 +2766,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-dark .custom-control-input:checked ~ .custom-control-label::after {
-  color: #ffffff;
+  color: #313342;
 }
 
 .checkbox-outline-primary .custom-control-label:before {
@@ -2852,8 +2852,8 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-outline-light .custom-control-input:checked ~ .custom-control-label::before {
-  border: 1px solid #ffffff;
-  background: #ffffff;
+  border: 1px solid #313342;
+  background: #313342;
 }
 
 .checkbox-outline-light .custom-control-input:checked ~ .custom-control-label::after {
@@ -4433,7 +4433,7 @@ changing this file will result on change of menu containing modifier class .menu
 .menu--style1 .searc-wrap input {
   background: rgba(255, 255, 255, 0.2);
   border: 0;
-  color: #ffffff;
+  color: #313342;
   font-weight: 400;
 }
 
@@ -4504,7 +4504,7 @@ changing this file will result on change of menu containing modifier class .menu
   visibility: hidden;
   padding: 0 20px;
   top: calc(100% - 37px);
-  background: #ffffff;
+  background: #313342;
   border: 1px solid #ebedf2;
   z-index: 2;
   transition: .3s ease;
@@ -12056,7 +12056,7 @@ span.counter {
 }
 
 .counter-up .counter p {
-  color: #ffffff;
+  color: #313342;
   margin-top: 7px;
   font-size: 18px;
   margin-bottom: 0;
@@ -12447,7 +12447,7 @@ span.counter {
 }
 
 .author-profile {
-  background: #ffffff;
+  background: #313342;
   padding: 30px;
   border-radius: 4px 4px 0 0;
 }
@@ -12566,7 +12566,7 @@ span.counter {
   margin-bottom: 30px;
   display: flex;
   justify-content: flex-start;
-  background: #ffffff;
+  background: #313342;
   padding: 0 40px;
 }
 
@@ -12612,7 +12612,7 @@ span.counter {
 /* AUTHOR FOLLOWERS AREA */
 .user-single {
   border: 0 none;
-  background: #ffffff;
+  background: #313342;
   margin-bottom: 30px;
 }
 
@@ -12647,7 +12647,7 @@ span.counter {
 }
 
 .user-single .card-footer {
-  background: #ffffff;
+  background: #313342;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
